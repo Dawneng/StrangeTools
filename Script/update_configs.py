@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate updated config files into Cfg
+Generate updated config files into Cfg.
 """
 
 import os
@@ -15,7 +15,9 @@ TARGET_REPO = os.environ.get("TARGET_REPO", "Dawneng/StrangeTools")
 SOURCE_BRANCH = os.environ.get("SOURCE_BRANCH", "X")   # used in generated raw URLs
 TARGET_BRANCH = os.environ.get("TARGET_BRANCH", "main")  # push destination branch
 
-now = datetime.datetime.now()
+# Use UTC+8 for timestamp
+now_utc = datetime.datetime.utcnow()
+now = now_utc + datetime.timedelta(hours=8)
 time_str = f"{now.year}-{now.month}-{now.day} {now.hour:02d}:{now.minute:02d}"
 
 # Regex to match upstream raw URLs:
@@ -122,7 +124,7 @@ if not changed:
 # Commit & push generated Cfg files
 try:
     subprocess.check_call(["git", "add"] + changed)
-    commit_msg = "Generate new configs"
+    commit_msg = "Generate updated configs"
     subprocess.check_call(["git", "commit", "-m", commit_msg])
     # Push to target branch
     subprocess.check_call(["git", "push", "origin", f"HEAD:{TARGET_BRANCH}"])
