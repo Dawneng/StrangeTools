@@ -1,0 +1,209 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # daily at 00:00 UTC
+  workflow_dispatch:
+
+env:
+  UPSTREAM_REPO: Repcz/Tool
+  TARGET_REPO: Dawneng/StrangeTools
+  SOURCE_BRANCH: X
+  TARGET_BRANCH: main
+
+jobs:
+  sync_upstream:
+    name: Sync upstream
+    runs-on: ubuntu-latest
+    outputs:
+      updated: ${{ steps.check.outputs.updated }}
+      upstream_commits: ${{ steps.check.outputs.upstream_commits }}
+    steps:
+      - name: Checkout X (use PAT)
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ env.SOURCE_BRANCH }}
+          token: ${{ secrets.UPSTREAM_PUSH_TOKEN }}
+          persist-credentials: true
+
+      - name: Add upstream remote and fetch upstream branch (using PAT)
+        run: |
+          set -e
+          git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.UPSTREAM_PUSH_TOKEN }}" fetch --no-tags --prune https://github.com/${{ env.UPSTREAM_REPO }}.git ${{ env.SOURCE_BRANCH }}:refs/remotes/upstream/${{ env.SOURCE_BRANCH }}
+
+      - name: Check for upstream changes and update local X if needed
+        id: check
+        run: |
+          set -e
+          UPSTREAM_COMMITS=$(git rev-list --count HEAD..upstream/${{ env.SOURCE_BRANCH }} || echo 0)
+          echo "upstream_commits=$UPSTREAM_COMMITS" >> $GITHUB_OUTPUT
+          if [ "$UPSTREAM_COMMITS" -ne 0 ]; then
+            echo "Found $UPSTREAM_COMMITS upstream commit(s) ahead of HEAD"
+            git checkout -B ${{ env.SOURCE_BRANCH }} upstream/${{ env.SOURCE_BRANCH }}
+            git push origin ${{ env.SOURCE_BRANCH }} --force-with-lease
+            echo "updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "No upstream updates found."
+            echo "updated=false" >> $GITHUB_OUTPUT
+          fi
+
+  sync_to_main:
+    name: Merge X into main
+    needs: sync_upstream
+    if: needs.sync_upstream.outputs.updated == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: sync-x-to-main-merge
+      cancel-in-progress: true
+    outputs:
+      updated_main: ${{ steps.set_job_output.outputs.updated_main }}
+    steps:
+      - name: Checkout repo (use PAT)
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.UPSTREAM_PUSH_TOKEN }}
+          persist-credentials: true
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch latest branches
+        run: |
+          set -e
+          git fetch origin ${{ env.SOURCE_BRANCH }} || git fetch origin refs/heads/${{ env.SOURCE_BRANCH }}:refs/heads/${{ env.SOURCE_BRANCH }}
+          git fetch origin ${{ env.TARGET_BRANCH }} || git fetch origin refs/heads/${{ env.TARGET_BRANCH }}:refs/heads/${{ env.TARGET_BRANCH }}
+
+      - name: Check if SOURCE has new commits vs TARGET
+        id: check2
+        run: |
+          set -e
+          COUNT=$(git rev-list --count origin/${{ env.TARGET_BRANCH }}..origin/${{ env.SOURCE_BRANCH }} || echo 0)
+          echo "ahead_count=$COUNT" >> $GITHUB_OUTPUT
+          echo "SOURCE is ahead by $COUNT commit(s)"
+
+      - name: Mark no changes to merge (if none)
+        if: steps.check2.outputs.ahead_count == '0'
+        run: |
+          echo "false" > /tmp/updated_main
+          echo "No new commits on ${{ env.SOURCE_BRANCH }} relative to ${{ env.TARGET_BRANCH }}. Nothing to do."
+
+      - name: Checkout TARGET branch
+        if: steps.check2.outputs.ahead_count != '0'
+        run: |
+          set -e
+          git checkout ${{ env.TARGET_BRANCH }}
+
+      - name: Try fast-forward merge if possible
+        if: steps.check2.outputs.ahead_count != '0'
+        id: ff
+        run: |
+          set -e
+          if git merge-base --is-ancestor origin/${{ env.TARGET_BRANCH }} origin/${{ env.SOURCE_BRANCH }}; then
+            echo "Fast-forward possible"
+            git merge --ff-only origin/${{ env.SOURCE_BRANCH }}
+            echo "result=fast-forward" >> $GITHUB_OUTPUT
+          else
+            echo "result=needs-merge" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit & push fast-forward result
+        if: steps.ff.outputs.result == 'fast-forward'
+        run: |
+          set -e
+          git push origin ${{ env.TARGET_BRANCH }}
+          echo "true" > /tmp/updated_main
+          echo "Fast-forward push done."
+
+      - name: Perform merge commit (preserve workflows)
+        if: steps.ff.outputs.result == 'needs-merge'
+        id: perform_merge
+        run: |
+          set -e
+          git merge --no-ff --no-commit origin/${{ env.SOURCE_BRANCH }} || true
+          if [ -n "$(git ls-files -u)" ]; then
+            echo "CONFLICTS_DETECTED=1" >> $GITHUB_OUTPUT
+          else
+            echo "CONFLICTS_DETECTED=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Finalize merge when no conflicts (keep workflows from TARGET)
+        if: steps.ff.outputs.result == 'needs-merge' && steps.perform_merge.outputs.CONFLICTS_DETECTED == '0'
+        run: |
+          set -e
+          git checkout --ours -- .github/workflows || true
+          git add -A
+          if git diff --cached --quiet; then
+            echo "After excluding .github/workflows, no changes to commit on ${{ env.TARGET_BRANCH }}."
+            git merge --abort || true
+            echo "false" > /tmp/updated_main
+            exit 0
+          fi
+          git commit -m "Merge branch '${{ env.SOURCE_BRANCH }}' into ${{ env.TARGET_BRANCH }}"
+          git push origin ${{ env.TARGET_BRANCH }}
+          echo "true" > /tmp/updated_main
+          echo "Merged ${{ env.SOURCE_BRANCH }} into ${{ env.TARGET_BRANCH }} and pushed."
+
+      - name: Handle merge conflicts -> create sync branch & PR
+        if: steps.ff.outputs.result == 'needs-merge' && steps.perform_merge.outputs.CONFLICTS_DETECTED == '1'
+        env:
+          PR_BRANCH: sync/${{ env.SOURCE_BRANCH }}-into-${{ env.TARGET_BRANCH }}-${{ github.run_id }}
+        run: |
+          set -e
+          echo "Merge conflicts detected. Creating a sync branch from origin/${{ env.SOURCE_BRANCH }} and opening a PR for manual resolution."
+          git checkout -b "$PR_BRANCH" origin/${{ env.SOURCE_BRANCH }}
+          git push origin "$PR_BRANCH"
+          REPO="${{ github.repository }}"
+          TITLE="Sync ${{ env.SOURCE_BRANCH }} -> ${{ env.TARGET_BRANCH }} (merge conflicts need resolution)"
+          BODY="Automatic attempt to merge `${{ env.SOURCE_BRANCH }}` into `${{ env.TARGET_BRANCH }}` failed due to merge conflicts. A branch `${PR_BRANCH}` has been created from `${{ env.SOURCE_BRANCH }}`. Please review and resolve the PR; ensure `.github/workflows` remains intact."
+          API_JSON=$(jq -n --arg title "$TITLE" --arg head "$PR_BRANCH" --arg base "${{ env.TARGET_BRANCH }}" --arg body "$BODY" '{title:$title, head:$head, base:$base, body:$body}')
+          curl -s -X POST -H "Authorization: token ${{ secrets.UPSTREAM_PUSH_TOKEN }}" -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${REPO}/pulls \
+            -d "$API_JSON" || {
+              echo "Failed to create PR via API. You can manually create a PR from branch $PR_BRANCH into ${{ env.TARGET_BRANCH }}.";
+              exit 0;
+            }
+          echo "false" > /tmp/updated_main
+          echo "Created PR for branch $PR_BRANCH. Please resolve conflicts in the PR."
+
+      - name: set_job_output (report whether main was updated)
+        id: set_job_output
+        if: always()
+        run: |
+          VALUE=$(cat /tmp/updated_main 2>/dev/null || echo false)
+          echo "updated_main=$VALUE" >> $GITHUB_OUTPUT
+
+      - name: Cleanup (ensure no leftover merge state)
+        if: always()
+        run: |
+          git merge --abort || true
+
+  update_configs:
+    name: Generate configs
+    needs: sync_to_main
+    if: needs.sync_to_main.outputs.updated_main == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main (use PAT)
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ env.TARGET_BRANCH }}
+          token: ${{ secrets.UPSTREAM_PUSH_TOKEN }}
+          persist-credentials: true
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Ensure Script exists & Run update script to produce Cfg
+        run: |
+          set -e
+          python3 Script/update_configs.py
+
+      - name: Finished
+        run: echo "Config generation job complete."
