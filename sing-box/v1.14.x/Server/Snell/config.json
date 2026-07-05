@@ -34,7 +34,7 @@
             "listen": "::",
             "listen_port": 443,
             "version": 6,
-            "psk": "", // sing-box generate rand --base64 $((RANDOM % 244 + 12))
+            "psk": "",
             "mode": "default"
         }
     ],
