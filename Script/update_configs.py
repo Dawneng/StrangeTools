@@ -48,21 +48,28 @@ def should_skip_path(path):
         return True
     if parts and parts[0] == ".github":
         return True
+    if parts and parts[0] == Cfg_root:
+        return True
     return False
 
 changed = []
 
 for root, dirs, files in os.walk("."):
-    # Normalize root and avoid descending into .git/.github
+    # Normalize root and avoid descending into .git/.github/Cfg
     r = root.lstrip("./")
+    # prune dirs to avoid walking into .git, .github, Cfg
+    dirs[:] = [d for d in dirs if d not in (".git", ".github", Cfg_root)]
     if should_skip_path(r):
-        dirs[:] = [d for d in dirs if d not in (".git", ".github")]
         continue
     for fn in files:
         if fn in basenames:
             src_path = os.path.join(root, fn)
             # avoid touching workflow files explicitly
             if ".github" in src_path and "workflows" in src_path:
+                continue
+            # also ensure we don't process files that are already under Cfg/
+            # (defensive)
+            if os.path.normpath(src_path).split(os.sep)[0] == Cfg_root:
                 continue
             try:
                 with open(src_path, "r", encoding="utf-8", errors="ignore") as f:
@@ -110,6 +117,7 @@ for root, dirs, files in os.walk("."):
                 dest_dir = os.path.dirname(dest_path)
                 os.makedirs(dest_dir, exist_ok=True)
                 try:
+                    # Overwrite existing file if present
                     with open(dest_path, "w", encoding="utf-8") as f:
                         f.write(final_content)
                     changed.append(dest_path)
@@ -123,9 +131,14 @@ if not changed:
 
 # Commit & push generated Cfg files
 try:
+    # Stage only the generated files
     subprocess.check_call(["git", "add"] + changed)
     commit_msg = "Generate updated configs"
-    subprocess.check_call(["git", "commit", "-m", commit_msg])
+    # commit may fail if nothing to commit (unlikely since changed non-empty), handle gracefully
+    try:
+        subprocess.check_call(["git", "commit", "-m", commit_msg])
+    except subprocess.CalledProcessError:
+        print("No changes to commit (git commit returned non-zero).")
     # Push to target branch
     subprocess.check_call(["git", "push", "origin", f"HEAD:{TARGET_BRANCH}"])
     print("Pushed generated Cfg files:", changed)
