@@ -22,8 +22,8 @@
             {"query_type": "HTTPS","action": "reject"},
             {"domain_suffix": ["lancache.steamcontent.com","10099.com.cn","msftconnecttest.com","msftncsi.com","local","lan","home","internal","corp","example.com"],"server": "local"},
             {"query_type": ["A","AAAA"],"action": "route","server": "fakeip","rewrite_ttl": 1},
-            {"clash_mode": "All Proxy","action": "route","server": "local"},
-            {"clash_mode": "All Direct","action": "route","server": "fakeip"}
+            {"clash_mode": "All Proxy","action": "route","server": "fakeip"},
+            {"clash_mode": "All Direct","action": "route","server": "local"}
         ],
         "reverse_mapping": true,
         "strategy": "ipv4_only",
