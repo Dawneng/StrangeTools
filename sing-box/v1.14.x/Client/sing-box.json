@@ -76,7 +76,7 @@
         ],
         "rules": [
             {"action": "sniff","sniffer": ["http","tls","quic","dns"]},
-            {"type": "logical","mode": "or","rules": [{"port": 53},{"protocol": "dns"}],"action": "hijack-dns"},
+            {"protocol": "dns","action": "hijack-dns"},
             {"ip_is_private": true,"action": "route","outbound": "Direct"},
             {"clash_mode": "All Direct","action": "route","outbound": "Direct"},
             {"clash_mode": "All Proxy","action": "route","outbound": "Manual"},
