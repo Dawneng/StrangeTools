@@ -111,9 +111,7 @@
         {
         "tag": "default",
         "version": 2,
-        "detour": "Manual",
-        "stream_receive_window": 0,
-        "connection_receive_window": 0
+        "detour": "Manual"
         }
     ],
     "services": [
