@@ -1,5 +1,5 @@
 # Author:https://github.com/Repcz
-# 最后更新时间: 2026-7-8 09:30
+# 最后更新时间: 2026-7-9 09:52
 #
 # Egern Version ≥ v2.20.0(772)
 # 官方文档: https://doc.egernapp.com
@@ -239,6 +239,17 @@ rules:
 - rule_set:
     match: https://raw.githubusercontent.com/Dawneng/StrangeTools/X/Egern/Rules/Telegram.yaml
     policy: Telegram
+- and:
+    name: Fuck Telegram
+    match:
+    - not:
+        match:
+          rule_set:
+            match: https://raw.githubusercontent.com/Dawneng/StrangeTools/X/Egern/Rules/Telegram.yaml
+    - listen_port:
+        match: '6153'
+    policy: REJECT
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/Dawneng/StrangeTools/X/Egern/Rules/Twitter.yaml
     policy: Social
