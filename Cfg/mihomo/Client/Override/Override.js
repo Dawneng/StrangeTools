@@ -1,4 +1,4 @@
-# 最后更新时间: 2026-7-10 09:51
+# 最后更新时间: 2026-7-11 09:30
 // 参考 Verge Rev 示例 Script 配置
 //
 // Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
