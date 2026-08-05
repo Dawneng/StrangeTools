@@ -1,5 +1,5 @@
 # 规则名称: Ads_SukkaW
-# 规则统计: 116068
+# 规则统计: 116055
 
 DOMAIN,1oavsblobprodcus350.blob.core.windows.net
 DOMAIN,2016.sina.cn
@@ -116007,21 +116007,8 @@ DOMAIN-KEYWORD,umeng
 DOMAIN-KEYWORD,utiq.
 DOMAIN-KEYWORD,wxsnsdy
 DOMAIN-KEYWORD,zymerget
-DOMAIN-WILDCARD,*-pcdn-*.biliapi.net
-DOMAIN-WILDCARD,*.ad.*.prod.hosts.ooklaserver.net
-DOMAIN-WILDCARD,*.tracking.*.miui.com
-DOMAIN-WILDCARD,ads-*.tiktok.com
-DOMAIN-WILDCARD,ads-*.xhscdn.com
-DOMAIN-WILDCARD,adv0*.msa.cdn.mediaset.net
-DOMAIN-WILDCARD,analytics-*.aasaam.com
-DOMAIN-WILDCARD,beacons*.gvt?.com
-DOMAIN-WILDCARD,f-log*.grammarly.io
-DOMAIN-WILDCARD,info.*.aleragroup.com
-DOMAIN-WILDCARD,log*-normal-*.tiktokv.com
-DOMAIN-WILDCARD,mon-*.byteoversea.com
-DOMAIN-WILDCARD,pixel*.adswizz.com
-DOMAIN-WILDCARD,tracking.*.miui.com
-DOMAIN-WILDCARD,v*.thenewstack.io
+DOMAIN-SUFFIX,ad.*.prod.hosts.ooklaserver.net
+DOMAIN-SUFFIX,tracking.*.miui.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR,101.35.204.35/32,no-resolve
 IP-CIDR,103.224.222.208/32,no-resolve
