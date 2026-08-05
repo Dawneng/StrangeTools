@@ -87,5 +87,5 @@ domain_suffix_set:
   - ttwstatic.com
   - tzvbfs.com
 asn_set:
-  - 'AS11983'
-  - 'AS138699'
+  - '11983'
+  - '138699'
