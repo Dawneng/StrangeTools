@@ -1,8 +1,7 @@
 # 规则名称: AI
-# 规则统计: 51
+# 规则统计: 50
 
 domain_set:
-  - 7h15_ru1353t_1s_m4d3_by_5ukk4w.skk.moe
   - ai.google.dev
   - aida.googleapis.com
   - aisandbox-pa.googleapis.com
@@ -17,6 +16,9 @@ domain_set:
   - jules.google.com
   - openrouter.ai
   - robinfrontend-pa.googleapis.com
+domain_keyword_set:
+  - alkalimakersuite-pa.clients6.google.com
+  - openai
 domain_suffix_set:
   - ai.com
   - aistudio.google.com
@@ -51,8 +53,5 @@ domain_suffix_set:
   - proactivebackend-pa.googleapis.com
   - sora.com
   - x.ai
-domain_keyword_set:
-  - alkalimakersuite-pa.clients6.google.com
-  - openai
 url_regex_set:
-  - "https://www\\.google\\.com/.*continue=https://gemini\\.google\\.com.+"
+  - 'https://www\.google\.com/.*continue=https://gemini\.google\.com.+'

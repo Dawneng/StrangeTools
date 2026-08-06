@@ -174,9 +174,9 @@ domain_set:
   - windbg.download.prss.microsoft.com
   - xvcf1.xboxlive.com
   - xvcf2.xboxlive.com
+domain_keyword_set:
+  - epicgames-download
 domain_suffix_set:
   - cloudflarestorage.com
   - hf.co
   - storage.live.com
-domain_keyword_set:
-  - epicgames-download

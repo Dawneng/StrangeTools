@@ -39,4 +39,4 @@ domain_suffix_set:
   - pianyuan.org
   - test-ipv6.com
 dest_port_set:
-  - "22"
+  - '22'

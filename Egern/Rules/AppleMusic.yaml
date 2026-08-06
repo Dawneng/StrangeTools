@@ -13,4 +13,4 @@ domain_suffix_set:
   - blobstore.apple.com
   - music.apple.com
 user_agent_set:
-  - "Music*"
+  - 'Music*'

@@ -4,6 +4,9 @@
 domain_set:
   - api.mixpanel.com
   - events-gateway.ncdev.site
+domain_keyword_set:
+  - nicegram
+  - telegram
 domain_suffix_set:
   - cdn-telegram.org
   - comments.app
@@ -31,6 +34,3 @@ domain_suffix_set:
   - tx.me
   - usercontent.dev
   - walletbot.me
-domain_keyword_set:
-  - nicegram
-  - telegram

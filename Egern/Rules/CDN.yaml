@@ -1,12 +1,12 @@
 # 规则名称: CDN
-# 规则统计: 4656
+# 规则统计: 4655
 
 domain_set:
   - 0x0.st
   - 3dna.nationbuilder.com
   - 4gtvimg2.4gtv.tv
-  - 7h15_ru1353t_1s_m4d3_by_5ukk4w.skk.moe
   - a-cdn.anthropic.com
+  - a-tiles.locationiq.com
   - a.deviantart.net
   - a.fireside.fm
   - a.gawby.com
@@ -358,6 +358,7 @@ domain_set:
   - awsimgsrc.dmm.co.jp
   - axiecdn.axieinfinity.com
   - az700632.vo.msecnd.net
+  - b-tiles.locationiq.com
   - b.manufact.com
   - b.peatio.com
   - b.sf-syn.com
@@ -374,6 +375,7 @@ domain_set:
   - banners.chessbase.com
   - barracuda-assets.zoovu.com
   - barracuda-cdn.zoovu.com
+  - basemap.beacondb.net
   - bcdn.alotporn.com
   - bcdn.starapps.studio
   - bcmedia.bitchute.com
@@ -412,6 +414,7 @@ domain_set:
   - busuanzi.ibruce.info
   - bytescale.mobbin.com
   - c-bin.b-cdn.net
+  - c-tiles.locationiq.com
   - c.1password.com
   - c.animaapp.com
   - c.fantia.jp
@@ -1523,7 +1526,6 @@ domain_set:
   - hp.foxnews.com
   - hub-assets.displaycal.net
   - hubspotonwebflow.com
-  - hv-monsterdb-data.skk.moe
   - i-cdn.embed.ly
   - i.111666.best
   - i.1password.com
@@ -1843,7 +1845,6 @@ domain_set:
   - img.riskified.com
   - img.sflix.to
   - img.shoplineapp.com
-  - img.skk.moe
   - img.sparemin.com
   - img.sparknotes.com
   - img.supjav.com
@@ -1985,8 +1986,6 @@ domain_set:
   - kh.google.com
   - lain.bgm.tv
   - lastfm.freetls.fastly.net
-  - latency-test.lab.skk.moe
-  - latency-test.skk.moe
   - launcher-files.modrinth.com
   - launcher.spot.im
   - launchercontent.mojang.com
@@ -2283,7 +2282,6 @@ domain_set:
   - pic.imge.cc
   - pic.macked.app
   - pic.onlinewebfonts.com
-  - pic.skk.moe
   - piccdn.7mmtv.sx
   - pics.dmm.co.jp
   - pics.hentai.name
@@ -3123,6 +3121,7 @@ domain_set:
   - tiles.arcticconnect.ca
   - tiles.gsj.jp
   - tiles.immich.cloud
+  - tiles.locationiq.com
   - tiles.mapilion.com
   - tiles.mapillary.com
   - tiles.maps.eox.at
@@ -3375,6 +3374,28 @@ domain_set:
   - zephr-templates.cnbc.com
   - zod.dev
   - zzz.wxw.moe
+domain_keyword_set:
+  - '-assets.worldsex.com'
+  - '-cdn.eporner.com'
+  - '-files.gitbook.io'
+  - '-images.disco-api.com'
+  - '-res.cloudinary.com'
+  - '-thumbs.pornhost.com'
+  - '-thumbs.worldsex.com'
+  - 99avcdn
+  - assets.trustpilot.net
+  - cdn.adultempire.com
+  - cdn.trustpilot.net
+  - dsn.algolia.net
+  - fonts.hanime1
+  - images.trustpilot.com
+  - images.trustpilot.net
+  - scripts.trustpilot.com
+  - static.grammarly.com
+  - static.trustpilot.com
+  - vdownload.hanime1
+  - vod-adaptive.akamaized.net
+  - web-assets.zendesk
 domain_suffix_set:
   - 1a-1791.com
   - 1passwordusercontent.ca
@@ -4579,85 +4600,63 @@ domain_suffix_set:
   - zorocdn.xyz
   - zpi.cx
   - zpicdn.lol
-domain_keyword_set:
-  - -assets.worldsex.com
-  - -cdn.eporner.com
-  - -files.gitbook.io
-  - -images.disco-api.com
-  - -res.cloudinary.com
-  - -thumbs.pornhost.com
-  - -thumbs.worldsex.com
-  - 99avcdn
-  - assets.trustpilot.net
-  - cdn.adultempire.com
-  - cdn.trustpilot.net
-  - dsn.algolia.net
-  - fonts.hanime1
-  - images.trustpilot.com
-  - images.trustpilot.net
-  - scripts.trustpilot.com
-  - static.grammarly.com
-  - static.trustpilot.com
-  - vdownload.hanime1
-  - vod-adaptive.akamaized.net
-  - web-assets.zendesk
 domain_wildcard_set:
-  - "*-intake-*-datadoghq.com"
-  - "*-intake.*.datadoghq.com"
-  - "*.fsvod?.com"
-  - "*.img.*.sendibm?.com"
-  - "*.kuaikan-cdn?.com"
-  - "*.skyearth?.xyz"
-  - "appcenter-filemanagement-*.cloudapp.net"
-  - "assets*.freshdesk.com"
-  - "assets.*.imaga.co"
-  - "blog-imgs-??.2nt.com"
-  - "blog-imgs-??.fc2.com"
-  - "cdn*.boysfood.com"
-  - "cdn*.pigav.com"
-  - "cdn*.porn87.com"
-  - "cdn*.pornhost.com"
-  - "cdn-*.microsoft.com"
-  - "cdn-msp?.18comic.org"
-  - "cdn-msp?.18comic.vip"
-  - "cdn-msp?.jmcomic-zzz.one"
-  - "cdn-msp?.jmcomic.me"
-  - "cdn.*.microsoft.com"
-  - "cdn.*.office.net"
-  - "cdn?-dl.pornhost.com"
-  - "cdn?.18girlssex.com"
-  - "cdn?.mikuclub.fun"
-  - "cdns.*.gigya.com"
-  - "chunk-*.mux.com"
-  - "fastly-*.allmovie.com"
-  - "file?.mikuclub.fun"
-  - "i?.nhentai.net"
-  - "image*.cloudokyo.cloud"
-  - "img-*.now.com"
-  - "img?.porngo.com"
-  - "img??.porngo.com"
-  - "object-storage-*.vexxhost.net"
-  - "ocsp.*.amazontrust.com"
-  - "proxy-*.dailymotion.com"
-  - "rr?---??.ouo.si"
-  - "s*.hanime1"
-  - "s3-*.figma.com"
-  - "s3.*.wasabisys.com"
-  - "s?.maxstream.org"
-  - "s??.maxstream.org"
-  - "s???.pornone.com"
-  - "sdk.*.braze.eu"
-  - "static?.tgstat.ru"
-  - "static??.tgstat.ru"
-  - "stream?.kissjav.com"
-  - "stream??.kissjav.com"
-  - "t?.nhentai.net"
-  - "th-*.pornone.com"
-  - "uploads-*.insided.com"
-  - "v.rn???.xyz"
-  - "video*.cloudokyo.cloud"
-  - "video-thumbnail2.fc2.com"
-  - "video-thumbnail?.liaoningmovie.net"
-  - "video?-thumbnail?.fc2.com"
-  - "video?-thumbnail?.liaoningmovie.net"
-  - "vip-videoprem*-thumbnail?.fc2.com"
+  - '*-intake-*-datadoghq.com'
+  - '*-intake.*.datadoghq.com'
+  - '*.fsvod?.com'
+  - '*.img.*.sendibm?.com'
+  - '*.kuaikan-cdn?.com'
+  - '*.skyearth?.xyz'
+  - 'appcenter-filemanagement-*.cloudapp.net'
+  - 'assets*.freshdesk.com'
+  - 'assets.*.imaga.co'
+  - 'blog-imgs-??.2nt.com'
+  - 'blog-imgs-??.fc2.com'
+  - 'cdn*.boysfood.com'
+  - 'cdn*.pigav.com'
+  - 'cdn*.porn87.com'
+  - 'cdn*.pornhost.com'
+  - 'cdn-*.microsoft.com'
+  - 'cdn-msp?.18comic.org'
+  - 'cdn-msp?.18comic.vip'
+  - 'cdn-msp?.jmcomic-zzz.one'
+  - 'cdn-msp?.jmcomic.me'
+  - 'cdn.*.microsoft.com'
+  - 'cdn.*.office.net'
+  - 'cdn?-dl.pornhost.com'
+  - 'cdn?.18girlssex.com'
+  - 'cdn?.mikuclub.fun'
+  - 'cdns.*.gigya.com'
+  - 'chunk-*.mux.com'
+  - 'fastly-*.allmovie.com'
+  - 'file?.mikuclub.fun'
+  - 'i?.nhentai.net'
+  - 'image*.cloudokyo.cloud'
+  - 'img-*.now.com'
+  - 'img?.porngo.com'
+  - 'img??.porngo.com'
+  - 'object-storage-*.vexxhost.net'
+  - 'ocsp.*.amazontrust.com'
+  - 'proxy-*.dailymotion.com'
+  - 'rr?---??.ouo.si'
+  - 's*.hanime1'
+  - 's3-*.figma.com'
+  - 's3.*.wasabisys.com'
+  - 's?.maxstream.org'
+  - 's??.maxstream.org'
+  - 's???.pornone.com'
+  - 'sdk.*.braze.eu'
+  - 'static?.tgstat.ru'
+  - 'static??.tgstat.ru'
+  - 'stream?.kissjav.com'
+  - 'stream??.kissjav.com'
+  - 't?.nhentai.net'
+  - 'th-*.pornone.com'
+  - 'uploads-*.insided.com'
+  - 'v.rn???.xyz'
+  - 'video*.cloudokyo.cloud'
+  - 'video-thumbnail2.fc2.com'
+  - 'video-thumbnail?.liaoningmovie.net'
+  - 'video?-thumbnail?.fc2.com'
+  - 'video?-thumbnail?.liaoningmovie.net'
+  - 'vip-videoprem*-thumbnail?.fc2.com'

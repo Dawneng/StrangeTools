@@ -294,6 +294,12 @@ domain_set:
   - yt-adp.nosdn.127.net
   - yt-adp.ws.126.net
   - zgsdk.zhugeio.com
+domain_keyword_set:
+  - adservice
+  - hoisin.coocaa.com
+  - hoisin.coocaatv.com
+  - stsdk.vivo.com.cn
+  - stsdk.vivoglobal.com
 domain_suffix_set:
   - 003store.com
   - 00p034d0dw.com
@@ -6192,12 +6198,6 @@ domain_suffix_set:
   - zybkrv.icu
   - zymakzaeddla.com
   - zzd6.com
-domain_keyword_set:
-  - adservice
-  - hoisin.coocaa.com
-  - hoisin.coocaatv.com
-  - stsdk.vivo.com.cn
-  - stsdk.vivoglobal.com
 ip_cidr_set:
   - 101.227.200.11/32
   - 101.227.200.28/32

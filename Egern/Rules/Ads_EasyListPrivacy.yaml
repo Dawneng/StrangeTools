@@ -4784,7 +4784,7 @@ domain_suffix_set:
   - afcv.champ-shop.com
   - afdbwq.blivakker.no
   - afep.pivn.shop
-  - aff*.kolektiva.net
+  - 'aff*.kolektiva.net'
   - affa8.hikkoshi-master.com
   - affectionknit.com
   - afficv.lettuce.co.jp
@@ -9037,7 +9037,7 @@ domain_suffix_set:
   - collection.mola.tv
   - collection.saga.co.uk
   - collections.equifax.com
-  - collector-*.luigisbox.com
+  - 'collector-*.luigisbox.com'
   - collector-1.ex.co
   - collector-api.99designs.com
   - collector-api.frspecifics.com
@@ -13403,7 +13403,7 @@ domain_suffix_set:
   - farahatco.actonservice.com
   - farethief.com
   - farmergoldfish.com
-  - faro-collector-prod-*.grafana.net
+  - 'faro-collector-prod-*.grafana.net'
   - farshake.com
   - farsnails.com
   - fashion.edm.globalsources.com
@@ -14154,7 +14154,7 @@ domain_suffix_set:
   - geonetric.actonservice.com
   - geoservice.curse.com
   - geotags.refinery89.com
-  - geotargetly-api-*.com
+  - 'geotargetly-api-*.com'
   - gestiondocumentaire.ricoh.fr
   - get-beta.kabbee.com
   - get-dev.mastersapp.com
@@ -15483,7 +15483,7 @@ domain_suffix_set:
   - hmvbmf.vidaxl.es
   - hmyjoj.5-fifth.com
   - hmziwy.yearbookordercenter.com
-  - hn-ping*.hashnode.com
+  - 'hn-ping*.hashnode.com'
   - hnibej.transat.com
   - hnnuaa.willhaben.at
   - hnpgjp.cyclemarket.jp
@@ -19445,7 +19445,7 @@ domain_suffix_set:
   - lodicoandco.actonservice.com
   - lodlww.carcon.co.jp
   - lofo3l15c674.platform.replai.io
-  - log-*.previewnetworks.com
+  - 'log-*.previewnetworks.com'
   - log-185a61e7.bendigobank.com.au
   - log-2ffe60ee.westpac.com.au
   - log-ads.r7.com
@@ -21655,7 +21655,7 @@ domain_suffix_set:
   - mcdmetric.aaa.com
   - mcdmetrics.aaa.com
   - mcdmetrics2.aaa.com
-  - mcdp-*.outbrain.com
+  - 'mcdp-*.outbrain.com'
   - mcfeely.net.mydays.de
   - mchtna.fashionplus.co.kr
   - mckbpe.united-arrows.co.jp
@@ -33744,7 +33744,7 @@ domain_suffix_set:
   - stat-ssl.tour-list.com
   - stat-ssl.webcg.net
   - stat-ssl.xn--pckua2a7gp15o89zb.com
-  - stat.*.v-56.com
+  - 'stat.*.v-56.com'
   - stat.24liveplus.com
   - stat.5-tv.ru
   - stat.absolutist.com
@@ -33886,8 +33886,8 @@ domain_suffix_set:
   - statistik.simaja.de
   - statm.the-adult-company.com
   - statman.sesong.info
-  - stats*.credit-cooperatif.coop
-  - stats-*.p2pnow.ru
+  - 'stats*.credit-cooperatif.coop'
+  - 'stats-*.p2pnow.ru'
   - stats-bq.stylight.net
   - stats-dc1.frz.io
   - stats-dev.brid.tv
@@ -34703,7 +34703,7 @@ domain_suffix_set:
   - stats.yourfone.de
   - stats.zimri.net
   - stats.zotabox.com
-  - stats2.*.fdnames.com
+  - 'stats2.*.fdnames.com'
   - stats2.architecturaldigest.com
   - stats2.bonappetit.com
   - stats2.cntraveler.com

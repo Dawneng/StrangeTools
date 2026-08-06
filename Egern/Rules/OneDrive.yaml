@@ -1,6 +1,10 @@
 # 规则名称: OneDrive
 # 规则统计: 15
 
+domain_keyword_set:
+  - 1drv
+  - onedrive
+  - skydrive
 domain_suffix_set:
   - livefilestore.com
   - microsoftpersonalcontent.com
@@ -14,7 +18,3 @@ domain_suffix_set:
   - spoprod-a.akamaihd.net
   - storage.live.com
   - storage.msn.com
-domain_keyword_set:
-  - 1drv
-  - onedrive
-  - skydrive

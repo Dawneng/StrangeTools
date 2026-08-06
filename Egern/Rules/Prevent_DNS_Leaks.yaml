@@ -3,6 +3,8 @@
 
 domain_set:
   - ip-scan.adspower.net
+domain_keyword_set:
+  - leak
 domain_suffix_set:
   - addr.tools
   - browserleaks.com
@@ -23,5 +25,3 @@ domain_suffix_set:
   - vpnunlimited.com
   - whoer.net
   - whrq.net
-domain_keyword_set:
-  - leak

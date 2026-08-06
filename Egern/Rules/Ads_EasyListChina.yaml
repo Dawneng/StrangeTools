@@ -781,7 +781,7 @@ domain_suffix_set:
   - 9v7sbm9zc.com
   - 9vmbje748.com
   - 9z6p1shhsh.top
-  - a*.chajiaotong.com
+  - 'a*.chajiaotong.com'
   - a.10tianqi.com
   - a.4aqq.com
   - a.52wubi.com
@@ -908,8 +908,8 @@ domain_suffix_set:
   - abds.pingpingw.com
   - abgcrap.icu
   - abody.39.net
-  - ac*.786ip.com
-  - ac*.faxingchina.com
+  - 'ac*.786ip.com'
+  - 'ac*.faxingchina.com'
   - ac.86huoche.com
   - ac.art456.com
   - ac00qmnjz.com
@@ -946,7 +946,7 @@ domain_suffix_set:
   - adbd.liuxue86.com
   - additional59.top
   - adf.dahe.cn
-  - adi*.cnool.net
+  - 'adi*.cnool.net'
   - adimg.liba.com
   - adiy42o0w.com
   - adjb.5nd.com
@@ -1082,14 +1082,14 @@ domain_suffix_set:
   - arullelb.com
   - as1.m.hao123.com
   - as1.wenku.baidu.com
-  - asd8900.oss-*.aliyuncs.com
+  - 'asd8900.oss-*.aliyuncs.com'
   - ashow.pcpop.com
   - askjbvjnejcbzweh.com
   - assp.sohu.com
   - assure66.top
   - asy76rvai.com
   - asypwo.icu
-  - at*.doubanio.com
+  - 'at*.doubanio.com'
   - at32jaers.com
   - atanx.alicdn.com
   - atarrean.com
@@ -1121,7 +1121,7 @@ domain_suffix_set:
   - awjakpos.com
   - awkxf8bbj.com
   - awywlb89y.com
-  - ax.*.ifeng.com
+  - 'ax.*.ifeng.com'
   - ax.ifeng.com
   - ax07in8xkr.com
   - ax2t0u9ly.com
@@ -1222,7 +1222,7 @@ domain_suffix_set:
   - bdcode.35d1.com
   - bdcode.qinglue.com
   - bdcode.youke.com
-  - bdcpro*.techweb.com.cn
+  - 'bdcpro*.techweb.com.cn'
   - bdgg.qjy168.com
   - bdjiaoben.wmxa.cn
   - bdjj.bzr99.com
@@ -1232,7 +1232,7 @@ domain_suffix_set:
   - bdjs.guangyuanol.cn
   - bdjs.gushiju.net
   - bdjs.uimg.cn
-  - bdlm*.hc360.com
+  - 'bdlm*.hc360.com'
   - bdm.911cha.com
   - bdm.ye-su.cn
   - bdmjs.xywy.com
@@ -1660,8 +1660,8 @@ domain_suffix_set:
   - cyu6bl939o.com
   - cz16vlh0la.com
   - czt4gnz57.com
-  - d*.ruiwen.com
-  - d*.xinshipu.com
+  - 'd*.ruiwen.com'
+  - 'd*.xinshipu.com'
   - d-test.39.net
   - d.8181zx.com
   - d.ab126.com
@@ -1834,7 +1834,7 @@ domain_suffix_set:
   - dlkfhlkjoirfgn.com
   - dlkliqrxt2.com
   - dlsybe78o0.com
-  - dm*.yxlady.com
+  - 'dm*.yxlady.com'
   - dm.17xuexiba.com
   - dm.21hubei.com
   - dm.51okc.com
@@ -1861,7 +1861,7 @@ domain_suffix_set:
   - dms.xuexxing.com
   - dmym.fwol.cn
   - dmyzf4op0.com
-  - dn*.ixinwei.com
+  - 'dn*.ixinwei.com'
   - dneimig.com
   - dnminullwq.com
   - dnnxq2b16.com
@@ -2094,7 +2094,7 @@ domain_suffix_set:
   - fakxqq.cn
   - falsehood67.top
   - familly56.top
-  - fanpingbi*.gaokao.com
+  - 'fanpingbi*.gaokao.com'
   - fantasylow.com
   - fanyi100.com.cn
   - farm-cn.plista.com
@@ -2187,7 +2187,7 @@ domain_suffix_set:
   - fp.nanrenwo.net
   - fp2nn4zxlp.com
   - fp9gvw5ber.com
-  - fpb*.51edu.com
+  - 'fpb*.51edu.com'
   - fpb.sohu.com
   - fpb1.apple886.com
   - fpb1.jsq886.com
@@ -2280,7 +2280,7 @@ domain_suffix_set:
   - gbiltuj8w.com
   - gchk5bcnaz.com
   - gcjg3ry7m.com
-  - gcw*.2liang.cn
+  - 'gcw*.2liang.cn'
   - gdbegok47.com
   - gdpj8lm2t.com
   - gdqu.cn
@@ -2811,8 +2811,8 @@ domain_suffix_set:
   - immediate49.com
   - immunity44.com
   - immunity95.com
-  - impservice*.yodao.com
-  - impservice*.youdao.com
+  - 'impservice*.yodao.com'
+  - 'impservice*.youdao.com'
   - imuchalo.com
   - incapacity75.top
   - inception27.com
@@ -2900,7 +2900,7 @@ domain_suffix_set:
   - j85izots6.com
   - j8n60aooj.com
   - j8tzoy3xwn.com
-  - ja*.gamersky.com
+  - 'ja*.gamersky.com'
   - jab88.com
   - jaimbai2b1.com
   - jasmine33.top
@@ -2993,7 +2993,7 @@ domain_suffix_set:
   - jr9v5lx1ro.com
   - jrge.cn
   - jrq39d1r8.com
-  - js*.abolezi.com
+  - 'js*.abolezi.com'
   - js.263y.com
   - js.92aliyun.com
   - js.bju888.com
@@ -3150,7 +3150,7 @@ domain_suffix_set:
   - kxkask.icu
   - kxsu.cn
   - ky595images.com
-  - ky891.oss-*.aliyuncs.com
+  - 'ky891.oss-*.aliyuncs.com'
   - kychq.cn
   - kzi6mbwbk.com
   - kzki21j8f6.com
@@ -4137,7 +4137,7 @@ domain_suffix_set:
   - qnywjs.buzz
   - qnywphp.forum
   - qnywsrc.buzz
-  - qpb*.sohu.com
+  - 'qpb*.sohu.com'
   - qphlllvgt.com
   - qpvrutah.com
   - qq2tdd0xx.com
@@ -4232,7 +4232,7 @@ domain_suffix_set:
   - remedyy46.com
   - reorganizes64.com
   - requisite57.com
-  - res*.pinpai8.cn
+  - 'res*.pinpai8.cn'
   - rescission77.top
   - reservation35.top
   - resource.baomihua.com
@@ -4364,8 +4364,8 @@ domain_suffix_set:
   - sab5a4zz5.com
   - sal5ab6uf.com
   - salary.xiao84.com
-  - sam*.baby-kingdom.com
-  - same*.stockstar.com
+  - 'sam*.baby-kingdom.com'
+  - 'same*.stockstar.com'
   - same.chinadaily.com.cn
   - same.eastmoney.com
   - sanatorium73.top
@@ -4481,7 +4481,7 @@ domain_suffix_set:
   - staitcfile.org
   - stamina4.top
   - star-seo.oss-ap-northeast-1.aliyuncs.com
-  - static*.365inews.com
+  - 'static*.365inews.com'
   - static-cn.plista.com
   - static-ssp.yidianzixun.com
   - static.gaomaer.cn
@@ -4713,7 +4713,7 @@ domain_suffix_set:
   - tu3921276844.cc
   - tu4038097360.cc
   - tu6767109513.cc
-  - tupian888.*.bcebos.com
+  - 'tupian888.*.bcebos.com'
   - turcailnt.com
   - tux76afo5.com
   - tvfvxr.icu
@@ -4803,7 +4803,7 @@ domain_suffix_set:
   - ubmcvideo.baidustatic.com
   - ubudibhf1b.com
   - ubyf.cn
-  - uc*.atobo.com
+  - 'uc*.atobo.com'
   - uc9.suinidai.com.cn
   - ucriqupq.com
   - ucuypyhcns.com
@@ -4871,7 +4871,7 @@ domain_suffix_set:
   - undertow88.com
   - undm.qibulo.com
   - unenviable89.com
-  - union*.365inews.com
+  - 'union*.365inews.com'
   - union-wifi.com
   - union.china.com.cn
   - union.yihaodian.com
@@ -5042,7 +5042,7 @@ domain_suffix_set:
   - vmn05pnuh.com
   - vmyv.cn
   - vnlozunyvl.com
-  - vns86.oss-*.aliyuncs.com
+  - 'vns86.oss-*.aliyuncs.com'
   - vnurqroibt.com
   - vnyqemhir.com
   - vocabulary83.com
@@ -5521,7 +5521,7 @@ domain_suffix_set:
   - y6oiuyphb.com
   - y6p7022ep4.com
   - y9oog9hyuo.com
-  - ya*.dwstatic.com
+  - 'ya*.dwstatic.com'
   - yah3ph65tc.com
   - yahzsa6o2o.com
   - yakhaknog.com
@@ -5609,7 +5609,7 @@ domain_suffix_set:
   - yrnv.cn
   - yrwks6l3cy.com
   - ys2000.cdn.bcebos.com
-  - ysdm*.ys137.com.cn
+  - 'ysdm*.ys137.com.cn'
   - ysuy.cn
   - yt-adp.nosdn.127.net
   - yt-adp.ws.126.net
@@ -5758,7 +5758,7 @@ domain_suffix_set:
   - zh4qnnf63.com
   - zhbhivvoid.com
   - zhihu.xmcimg.com
-  - zhizhizhizhi.oss-*.aliyuncs.com
+  - 'zhizhizhizhi.oss-*.aliyuncs.com'
   - zhjqtd.icu
   - zhteknutoy.com
   - zhuqellv.com

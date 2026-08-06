@@ -43,8 +43,8 @@ domain_suffix_set:
   - ocsp.apple.com
   - tv.apple.com
 user_agent_set:
-  - "AppleNews*"
-  - "AppleTV*"
-  - "com.apple.news*"
-  - "com.apple.trustd*"
-  - "com.apple.tv*"
+  - 'AppleNews*'
+  - 'AppleTV*'
+  - 'com.apple.news*'
+  - 'com.apple.trustd*'
+  - 'com.apple.tv*'

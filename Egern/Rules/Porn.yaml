@@ -1,6 +1,8 @@
 # 规则名称: Porn
 # 规则统计: 26
 
+domain_keyword_set:
+  - porn
 domain_suffix_set:
   - 8teenxxx.com
   - ahcdn.com
@@ -27,5 +29,3 @@ domain_suffix_set:
   - xvideos-cdn.com
   - xvideos.com
   - ypncdn.com
-domain_keyword_set:
-  - porn

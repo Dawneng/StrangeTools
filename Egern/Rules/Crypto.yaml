@@ -8,6 +8,8 @@ domain_set:
   - bybit.ada.support
   - gcaptcha4.geetest.com
   - pushstat.api.engagelab.cc
+domain_keyword_set:
+  - htx.com
 domain_suffix_set:
   - 88maru.com
   - appsflyer.com
@@ -33,10 +35,8 @@ domain_suffix_set:
   - hbfile.net
   - htx.co.nz
   - mokexapp.com
-  - myqcloud.com 
+  - myqcloud.com
   - octu88.com
   - okx-dns1.com
   - okx-dns2.com
   - qcloud.com
-domain_keyword_set:
-  - htx.com

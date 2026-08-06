@@ -1,6 +1,8 @@
 # 规则名称: OpenAI
 # 规则统计: 17
 
+domain_keyword_set:
+  - openai
 domain_suffix_set:
   - auth0.com
   - challenges.cloudflare.com
@@ -18,5 +20,3 @@ domain_suffix_set:
   - sentry.io
   - sora.com
   - stripe.com
-domain_keyword_set:
-  - openai

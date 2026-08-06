@@ -1,10 +1,9 @@
 # 规则名称: ProxyMedia
-# 规则统计: 322
+# 规则统计: 321
 
 domain_set:
   - 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
   - 4gtvfreepcvod-cds.cdn.hinet.net
-  - 7h15_ru1353t_1s_m4d3_by_5ukk4w.skk.moe
   - akmcdnoversea-tw.inter.ptqy.gitv.tv
   - ana.video.friday.tw
   - apm-misaka.biliapi.net
@@ -62,6 +61,21 @@ domain_set:
   - www.tubitv.com
   - youtube.googleapis.com
   - youtubei.googleapis.com
+domain_keyword_set:
+  - '-spotify-com'
+  - '-tiktokcdn-com'
+  - apiproxy-device-prod-nlb-
+  - avoddashs
+  - bbcfmt
+  - dualstack.apiproxy-
+  - dualstack.ichnaea-web-
+  - jooxweb-api
+  - netflixdnstest
+  - nowtv100
+  - rthklive
+  - tvbanywhere
+  - uk-live
+  - voddazn
 domain_suffix_set:
   - 4gtv.tv
   - 5itv.tv
@@ -262,68 +276,53 @@ domain_suffix_set:
   - youtubeeducation.com
   - youtubegaming.com
   - youtubekids.com
-domain_keyword_set:
-  - -spotify-com
-  - -tiktokcdn-com
-  - apiproxy-device-prod-nlb-
-  - avoddashs
-  - bbcfmt
-  - dualstack.apiproxy-
-  - dualstack.ichnaea-web-
-  - jooxweb-api
-  - netflixdnstest
-  - nowtv100
-  - rthklive
-  - tvbanywhere
-  - uk-live
-  - voddazn
 user_agent_set:
-  - "*Spotify*"
-  - "AbemaTV*"
-  - "All4*"
-  - "Anime*"
-  - "AppleTV*"
-  - "Argo*"
-  - "BBCiPlayer*"
-  - "DAZN*"
-  - "DPlus*"
-  - "Deezer*"
-  - "Disney+*"
-  - "FOX NOW*"
-  - "FOXPlus*"
-  - "HBO NOW*"
-  - "HBOMAX*"
-  - "HWTVMobile*"
-  - "Himalaya*"
-  - "Hulu*"
-  - "ITV_Player*"
-  - "InstantVideo.US*"
-  - "JOOX*"
-  - "KKTV*"
-  - "LINE TV*"
-  - "My5*"
-  - "Naver TV*"
-  - "Niconico*"
-  - "Overcast*"
-  - "PBS*"
-  - "PPlus*"
-  - "Pandora*"
-  - "PeacockMobile*"
-  - "Prime Video*"
-  - "SoundCloud*"
-  - "TIDAL*"
-  - "TVer-Release*"
-  - "TaiwanGood*"
-  - "TikTok*"
-  - "Viu*"
-  - "WeMusic*"
-  - "WeTV*"
-  - "YouTube*"
-  - "YouTubeMusic*"
-  - "com.apple.tv*"
-  - "com.google.ios.youtube*"
-  - "com.google.ios.youtubemusic*"
-  - "com.kktv.ios.kktv*"
-  - "discovery+*"
-  - "encoreTVB*"
-  - "mytv*"
+  - '*Spotify*'
+  - 'AbemaTV*'
+  - 'All4*'
+  - 'Anime*'
+  - 'AppleTV*'
+  - 'Argo*'
+  - 'BBCiPlayer*'
+  - 'DAZN*'
+  - 'DPlus*'
+  - 'Deezer*'
+  - 'Disney+*'
+  - 'FOX NOW*'
+  - 'FOXPlus*'
+  - 'HBO NOW*'
+  - 'HBOMAX*'
+  - 'HWTVMobile*'
+  - 'Himalaya*'
+  - 'Hulu*'
+  - 'ITV_Player*'
+  - 'InstantVideo.US*'
+  - 'JOOX*'
+  - 'KKTV*'
+  - 'LINE TV*'
+  - 'My5*'
+  - 'Naver TV*'
+  - 'Niconico*'
+  - 'Overcast*'
+  - 'PBS*'
+  - 'PPlus*'
+  - 'Pandora*'
+  - 'PeacockMobile*'
+  - 'Prime Video*'
+  - 'SoundCloud*'
+  - 'TIDAL*'
+  - 'TVer-Release*'
+  - 'TaiwanGood*'
+  - 'TikTok*'
+  - 'Viu*'
+  - 'WeMusic*'
+  - 'WeTV*'
+  - 'YouTube*'
+  - 'YouTubeMusic*'
+  - 'com.apple.tv*'
+  - 'com.google.ios.youtube*'
+  - 'com.google.ios.youtubemusic*'
+  - 'com.kktv.ios.kktv*'
+  - 'discovery+*'
+  - 'encoreTVB*'
+  - 'mytv*'

@@ -11,6 +11,8 @@ domain_set:
   - dmqdd6hw24ucf.cloudfront.net
   - fls-na.amazon.com
   - www.amazon.com
+domain_keyword_set:
+  - avoddashs
 domain_suffix_set:
   - aiv-cdn.net
   - aiv-delivery.net
@@ -18,5 +20,3 @@ domain_suffix_set:
   - media-amazon.com
   - primevideo.com
   - pv-cdn.net
-domain_keyword_set:
-  - avoddashs

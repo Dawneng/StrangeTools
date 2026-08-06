@@ -13,31 +13,6 @@ domain_set:
   - wup.imtt.qq.com
   - wx.tenpay.com
   - wxapp.tc.qq.com
-domain_suffix_set:
-  - analytics.map.qq.com
-  - apis.map.qq.com
-  - cc.map.qq.com
-  - indoorroad.map.qq.com
-  - iot-tencent.com
-  - lbs.gtimg.com
-  - lbs.map.qq.com
-  - map.qq.com
-  - nlp.map.qq.com
-  - qlogo.cn
-  - qpic.cn
-  - rttgps.map.qq.com
-  - servicewechat.com
-  - ue.indoorloc.map.qq.com
-  - up-hl.3g.qq.com
-  - vweixinthumb.tc.qq.com
-  - wechat.com
-  - wechatos.net
-  - weixin.com
-  - weixin.qq.com
-  - wx.gtimg.com
-  - wx.qq.com
-  - wxs.qq.com
-  - yun-hl.3g.qq.com
 domain_keyword_set:
   - 101.226.129.
   - 101.226.211.
@@ -272,6 +247,31 @@ domain_keyword_set:
   - 61.241.44.
   - 61.241.47.
   - 61.241.49.
+domain_suffix_set:
+  - analytics.map.qq.com
+  - apis.map.qq.com
+  - cc.map.qq.com
+  - indoorroad.map.qq.com
+  - iot-tencent.com
+  - lbs.gtimg.com
+  - lbs.map.qq.com
+  - map.qq.com
+  - nlp.map.qq.com
+  - qlogo.cn
+  - qpic.cn
+  - rttgps.map.qq.com
+  - servicewechat.com
+  - ue.indoorloc.map.qq.com
+  - up-hl.3g.qq.com
+  - vweixinthumb.tc.qq.com
+  - wechat.com
+  - wechatos.net
+  - weixin.com
+  - weixin.qq.com
+  - wx.gtimg.com
+  - wx.qq.com
+  - wxs.qq.com
+  - yun-hl.3g.qq.com
 ip_cidr_set:
   - 111.30.160.0/20
   - 112.53.11.0/24
@@ -347,5 +347,5 @@ ip_cidr6_set:
   - 240E:FF:F100::/44
   - 240e:e1:a900:50::/112
 user_agent_set:
-  - "MicroMessenger*"
-  - "WeChat*"
+  - 'MicroMessenger*'
+  - 'WeChat*'
